@@ -1,0 +1,27 @@
+{
+  "name": "xanadont",
+  "version": "1.0.0",
+  "description": "Xanadont Blog",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --progress",
+    "build": "NODE_ENV=production node_modules/.bin/webpack -p --progress --colors"
+  },
+  "author": "Xanadont",
+  "license": "ISC",
+  "dependencies": {
+    "marked": "^0.3.6",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  },
+  "devDependencies": {
+    "@types/marked": "^0.0.28",
+    "@types/react": "^0.14.48",
+    "@types/react-dom": "^0.14.18",
+    "@types/whatwg-fetch": "^0.0.32",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.2"
+  }
+}

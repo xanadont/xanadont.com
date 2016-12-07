@@ -1,0 +1,68 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    margin-top: 5px;
+    font-weight: 300;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 16px;
+    color: #8dd3ff;
+}
+
+a, a:visited {
+    color: #8dd3ff;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: #fff2a3 5px solid !important;
+}
+
+#body {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#toc {
+    flex-direction: column;
+    width: 25%;
+    max-width: 300px;
+    min-width: 100px;
+    margin: 5px;
+    margin-right: 10px;
+}
+#toc > div {
+    cursor: pointer;
+    border-bottom: #fff 5px solid;
+}
+
+#content {
+    width: 600px;
+}
+
+#greeting {
+    flex-direction: column;
+}
+
+footer {
+    font-size: 0.7em;
+}
+
+.active {
+    border-bottom: #fff2a3 5px solid !important;
+}
