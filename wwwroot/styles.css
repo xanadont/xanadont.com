@@ -64,4 +64,5 @@ footer {
 .active {
     border-left: #8dd3ff 3px solid !important;
     padding-left: 3px;
+    transition: border-left 0.3s ease-in-out, padding-left 0.3s ease-in-out;
 }
