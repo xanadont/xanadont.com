@@ -7,7 +7,9 @@ export interface Content {
 export class ContentStore {
     static titles: Content[] = [
         { id:'20161123', title:'Xanadont here'},
-        { id:'20161207', title:'Markdown' }
+        { id:'20161207', title:'Markdown' },
+        { id:'20170316', title:'ASP.NET Core, Part 1' },
+        { id:'20170324', title:'ASP.NET Core, Part 2' }
     ];
 
     private static map: any = {};
