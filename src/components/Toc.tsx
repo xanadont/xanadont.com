@@ -1,5 +1,5 @@
-import * as React from "react";
-import { TocEntry } from "./TocEntry";
+import * as React from 'react';
+import { TocEntry } from './TocEntry';
 import { Content, ContentStore } from './Content';
 
 interface Props {

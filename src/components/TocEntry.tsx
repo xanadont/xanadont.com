@@ -1,6 +1,4 @@
-import * as React from "react";
-//import { Promise } from "core-js";
-//import { Fetch } from "whatwg-fetch";
+import * as React from 'react';
 
 interface Props {
     id: string;
@@ -20,14 +18,15 @@ export class TocEntry extends React.Component<Props, State> {
     }
 
     render() {
-        let className = this.props.active ? 'active' : null; 
+        let className = this.props.active ? 'active' : null;
         return (
-        <div id={this.props.id} className={className} onClick={e => this.entryClicked(e)}><h3>{this.props.label}</h3></div>
+            <div><a href={this.props.id} className={className} onClick={e => this.entryClicked(e)}>{this.props.label}</a></div>
         );
     }
 
-    entryClicked(event: React.MouseEvent<HTMLDivElement>) {
+    entryClicked(event: React.MouseEvent<HTMLAnchorElement>) {
         //this.setState({count:++this.state.count});
+        event.preventDefault();
         this.props.activated(this.props.id);
         console.log('selected');
     }

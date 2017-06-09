@@ -1,6 +1,6 @@
-import * as React from "react";
-import * as ReactDom from "react-dom";
-import * as Marked from "marked";
+import * as React from 'react';
+import * as ReactDom from 'react-dom';
+import * as Marked from 'marked';
 
 declare var hljs: any;
 
@@ -25,7 +25,16 @@ export class BlogEntry extends React.Component<Props, void> {
         let main = ReactDom.findDOMNode(this.refs.main);
         let codeBlocks = document.querySelectorAll('code');
         for (let i = 0; i < codeBlocks.length; ++i) {
-            hljs.highlightBlock(codeBlocks[i]);
+            var block = codeBlocks[i];
+            if (block.className == 'console') {
+                // Do nothing.
+            } else if (block.className.indexOf('inline-code') != -1) {
+                block.className = 'inline-code';
+            } else if (block.className) {
+                hljs.highlightBlock(block);
+            } else {
+                block.className = 'inline-code';
+            }
         }
     }
 }
